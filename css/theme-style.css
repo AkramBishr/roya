@@ -26,7 +26,8 @@ body a {
     /* padding: 10px 0 0 0; */
     background-color: #f5f8fb;
     background-size: 100% 100%;
-    min-height: 700px;
+    min-height: 100vh;
+    /* يضبط ارتفاع الرأس ليغطي شاشة الجوال */
     /* margin-bottom: -200px; */
 }
 
@@ -137,6 +138,27 @@ nav a#pull {
         text-align: center;
         width: 100%;
         text-indent: 25px;
+    }
+    /* هتهءتهضت */
+    nav ul {
+        display: none;
+        /* إخفاء القائمة الأساسية */
+    }
+    nav a#pull {
+        display: block;
+        /* إظهار زر القائمة المتجاوبة */
+    }
+    nav a#pull img {
+        width: 30px;
+        /* حجم أيقونة القائمة المنسدلة */
+        height: auto;
+    }
+    nav a#pull:after {
+        content: "☰";
+        /* رمز القائمة */
+        color: #876A6D;
+        font-size: 1.5em;
+        margin-left: 10px;
     }
 }
 
@@ -2037,7 +2059,9 @@ nav a#pull {
 .work {
     background-color: #f5f8fb;
     background-size: 100% 100%;
-    min-height: 700px;
+    /* min-height: 700px; */
+    min-height: 100vh;
+    /* يضبط ارتفاع الرأس ليغطي شاشة الجوال */
 }
 
 @media only screen and (max-width: 768px) {
@@ -2584,3 +2608,201 @@ text-align: center; */
 
 
 /* ك */
+
+@media (max-width: 480px) {
+    .slide-text h1 {
+        font-size: 1.5em;
+        /* تصغير حجم العنوان الرئيسي */
+    }
+    .slide-text span {
+        font-size: 1em;
+        /* تصغير حجم العنوان الثانوي */
+    }
+    .slide-btn {
+        font-size: 0.85em;
+        /* تصغير زر العنوان */
+        padding: 0.5em 1em;
+    }
+    .slide-text h1 {
+        font-size: 1.2em;
+        line-height: 1.4;
+        /* لملائمة الخطوط الكبيرة */
+    }
+    .slide-btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+        /* حجم أصغر للأزرار */
+    }
+    .head h3,
+    .features-grid h3 a,
+    .work-grid h4 {
+        font-size: 1.1em;
+        /* حجم أصغر للعناوين */
+    }
+    .features-grid p,
+    .work-grid p,
+    .contact-info p {
+        font-size: 0.9em;
+        /* حجم أصغر للنصوص */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-grids {
+        display: flex;
+        flex-direction: column;
+        /* ترتيب العناصر عموديًا */
+        align-items: center;
+    }
+    .work-grid {
+        width: 90%;
+        /* ضبط عرض العنصر ليشغل معظم عرض الشاشة */
+        margin-bottom: 20px;
+        /* إضافة مسافة بين العناصر */
+    }
+    .container,
+    .contact-content,
+    .features-grids,
+    .work-grids,
+    .portfolio-main {
+        width: 100%;
+        /* اجعل العرض يتناسب مع الشاشة بالكامل */
+        padding: 0 10px;
+        /* مسافة داخلية لترك مساحة حول المحتوى */
+        margin: 0 auto;
+        /* توسيط العناصر */
+    }
+    nav ul {
+        display: none;
+        /* إخفاء القائمة العادية */
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        padding: 10px;
+    }
+    nav a#pull {
+        display: block;
+        /* عرض زر القائمة للهواتف */
+        font-size: 1.5em;
+        text-align: right;
+    }
+    nav ul.active {
+        display: flex;
+        /* إظهار القائمة عند الضغط على زر القائمة */
+    }
+    .container,
+    .row {
+        width: 100% !important;
+        /* تمديد العرض بالكامل */
+        max-width: 100% !important;
+        /* عدم تحديد حد أقصى للعرض */
+        padding: 0;
+        /* إزالة المسافات الداخلية */
+        margin: 0 auto;
+        /* توسيط المحتوى في حالة الحاجة */
+    }
+    .features-grids,
+    .work-grids,
+    .portfolio-main {
+        display: flex;
+        flex-direction: column;
+        /* ترتيب عمودي للأعمدة */
+        align-items: center;
+    }
+    .features-grid,
+    .work-grid,
+    .portfolio-item {
+        width: 100%;
+        /* عرض كامل لكل عنصر */
+        margin: 10px 0;
+        /* مسافة بسيطة بين العناصر */
+    }
+    .header,
+    .section-with-background {
+        width: 100vw;
+        /* عرض الشاشة بالكامل */
+        margin: 0 auto;
+        /* لإزالة أي فجوات على الجوانب */
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-content {
+        flex-direction: column;
+        /* ترتيب عمودي للعناصر */
+        align-items: center;
+        /* توسيط العناصر */
+    }
+    .contact-form,
+    .contact-info {
+        width: 90%;
+        /* عرض العناصر بالكامل */
+        margin-bottom: 20px;
+        /* مسافة بين العناصر */
+    }
+}
+
+.header,
+.features,
+.work,
+.portfolio,
+.faq-section,
+.contact {
+    width: 100%;
+    padding: 0;
+    /* لإزالة أي مسافة داخلية قد تؤثر على عرض الخلفية */
+    margin: 0;
+    /* إزالة أي مسافة خارجية */
+}
+
+.header,
+.features,
+.work,
+.portfolio,
+.faq-section,
+.contact {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.header {
+    background-size: cover;
+    background-position: center;
+}
+
+.header,
+.section-with-background {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.header,
+.features,
+.work,
+.portfolio,
+.faq-section,
+.contact {
+    padding: 20px 0;
+    /* إضافة مسافة داخلية علوية وسفلية */
+}
+
+@media (max-width: 768px) {
+    .header,
+    .features,
+    .work,
+    .portfolio,
+    .faq-section,
+    .contact {
+        padding: 15px 0;
+    }
+    .container,
+    .row,
+    .section-content {
+        padding: 0 10px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
